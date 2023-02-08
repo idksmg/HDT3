@@ -176,6 +176,31 @@
  		    }
  	    }
 
+         Temporal = lista[x];
+        lista[x] = lista[b];
+        lista[b] = Temporal;
+        QuickSort(lista, a, x - 1);
+        QuickSort(lista, x + 1, b);
     }
 
- }
+
+
+    
+    /** 
+     * Bubble Sort
+     * @param lista
+     */
+    public void BubbleSort(T[] lista){
+        for (int i = 0; i < lista.length - 1; i++) {
+			for(int l = 0; l < lista.length-l-1; l++) {
+				if(compare.Compare(lista[l], lista[l+1]) > 0) {
+					T temp = lista[l];
+					lista[l] = lista[l+1];
+					lista[l+1] = temp;
+				}
+			}
+	    }
+    }
+}
+
+ 

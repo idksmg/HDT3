@@ -106,5 +106,64 @@ public class Principal {
                     /*
                      * Radix Sort
                      */
+                    
+                     case 4:{
+                        for(int i = 10; i <= 5000; i+=499){
+                            Integer[] lista = new Integer[i];
+            			
+                            for(int j=0; j<i; j++) {
+                                lista[j]=numeros[j];
+                            }                           
+                            aSort.RadixSort(lista);
+                            
+                            for(int recorrido:lista) {
+                                System.out.println(recorrido);
+                            }
+                            System.out.println("\nOrdenamiento con: " + i + " numeros.\n");
+                            System.out.println("Presionar Enter");
+                            teclado.nextLine();
+                        }
 
+                        System.out.println("Lista Ordenada");
+                        break;
+                    }
+
+                    /*
+                     * Bubble Sort
+                     */
+                    case 5:{
+                        for(int i = 10; i <= 5000; i+=499){
+                            Integer[] lista = new Integer[i];
+            			
+                            for(int j=0; j<i; j++) {
+                                lista[j]=numeros[j];
+                            }                           
+                            aSort.BubbleSort(lista);
+                            
+                            for(int recorrido:lista) {
+                                System.out.println(recorrido);
+                            }
+                            System.out.println("\nOrdenamiento con: " + i + " numeros.\n");
+                            System.out.println("Presionar Enter");
+                            teclado.nextLine();
+                        }
+
+                        System.out.println("Lista Ordenada");
+                        break;
+                    }
+
+                }
+            
+            //Programacion defensiva
+            }catch(Exception e){
+                System.out.println("Ha ingresado caracteres invalidos.");
+                teclado.next();
+            }    
+
+        }
+        
+        //Se le muestra un mensaje de despedida al usuario
+        System.out.println("Saliendo.");
+    }
 }
+

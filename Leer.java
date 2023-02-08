@@ -121,3 +121,32 @@ public class Leer{
         return null;
     }
 
+     /** 
+     * Actualiza los datos de un archivo que ya existe 
+     * @param list
+     */
+    public void Actualizar(Integer[] list){
+        try{
+            File archivo = new File(direccion);
+            FileWriter myFileWriter = new FileWriter(archivo);
+            BufferedWriter myBufferedWriter = new BufferedWriter(myFileWriter);
+
+            for (int i: list) {
+                NumCont += String.valueOf(i) + "\n";
+            }
+            myBufferedWriter.write(NumCont);
+            myBufferedWriter.close();
+
+        }catch(Exception e){
+            System.out.println("No se ha podido actualizar los datos. ");
+            e.printStackTrace();
+        }
+    }
+
+}
+
+public Integer[] VerificarDoc() {
+    return null;
+}
+
+}

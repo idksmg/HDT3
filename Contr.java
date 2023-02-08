@@ -15,6 +15,12 @@ public class Contr<T> implements ICompare<T> {
         num1 = Integer.parseInt(obj1.toString());
         num2 = Integer.parseInt(obj2.toString());
 
-
+        if(num1 > num2){
+            return 1;
+        }else if(num1 < num2){
+            return -1;
+        }else{
+            return 0;
+        }
     }
 }
